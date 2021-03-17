@@ -1,0 +1,13 @@
+09:04:00 **** Incremental Build of configuration Debug for project Nvic ****
+make all 
+Building file: ../src/DIO_program.c
+Invoking: Cross ARM GNU C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=8000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f1-stdperiph" -std=gnu11 -MMD -MP -MF"src/DIO_program.d" -MT"src/DIO_program.o" -c -o "src/DIO_program.o" "../src/DIO_program.c"
+../src/DIO_program.c:14:10: fatal error: STD_TYPE.h: No such file or directory
+ #include "STD_TYPE.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:32: src/DIO_program.o] Error 1
+
+09:04:01 Build Finished (took 472ms)
+

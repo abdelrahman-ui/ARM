@@ -1,0 +1,16 @@
+00:36:49 **** Incremental Build of configuration Debug for project NEC_PROTOCOL_RGB ****
+make all 
+Building file: ../src/main.c
+Invoking: Cross ARM GNU C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=8000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f1-stdperiph" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'voidTakeAction':
+../src/main.c:42:5: error: expected ')' before '{' token
+     {
+     ^
+../src/main.c:49:3: error: expected expression before '}' token
+   }
+   ^
+make: *** [src/subdir.mk:35: src/main.o] Error 1
+
+00:36:50 Build Finished (took 471ms)
+
