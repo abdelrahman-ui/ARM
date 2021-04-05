@@ -41,11 +41,11 @@
 #define  PIN14       14
 #define  PIN15       15
 
-void GOIP_voidSetPinDirection(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8MODE)  ; //MODE == DIR
+void MGOIP_voidSetPinDirection(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8MODE)  ; //MODE == DIR
 
-void GOIP_voidSetPinValue(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8Val)  ; //output with high or low 
+void MGPIO_voidSetPinValue(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8Val)  ; //output with high or low
 
-u8 GOIP_voidGetPinValue(u8 copy_u8PORT ,u8 copy_u8PIN)  ;					//return 
+u8 MGOIP_voidGetPinValue(u8 copy_u8PORT ,u8 copy_u8PIN)  ;					//return
 
 
 

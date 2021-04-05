@@ -21,7 +21,7 @@
 /**************************************NEW_FUNCTION************************************************************/
 //Every Pin Have 4 Bit So To The Next Pin You Need Four Step
 /*I Will Send To FUNCTION THE PORT THE PIN ALL THE MODE=(MODE+CONGF) */
-void GOIP_voidSetPinDirection(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8MODE)  
+void MGOIP_voidSetPinDirection(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8MODE)
 {
 	//Frist Switch To Know Which Port 
 	switch(copy_u8PORT)
@@ -95,7 +95,7 @@ void GOIP_voidSetPinDirection(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8MODE)
 
 /**************************************NEW_FUNCTION************************************************************/
 //Now When I Kow I'M Out SO OUT(0,1)
-void GOIP_voidSetPinValue(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8Val) 
+void MGOIP_voidSetPinValue(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8Val)
 {//EVERY PIN HAVE ONLY 1 BIT 
 	
 	switch(copy_u8PORT)
@@ -151,7 +151,7 @@ void GOIP_voidSetPinValue(u8 copy_u8PORT ,u8 copy_u8PIN,u8 copy_u8Val)
 /**************************************NEW_FUNCTION************************************************************/
 
 
-u8 GOIP_voidGetPinValue(u8 copy_u8PORT ,u8 copy_u8PIN)  
+u8 MGPIO_voidSetPinValue(u8 copy_u8PORT ,u8 copy_u8PIN)
 {
 	u8 LOC_u8Result =0 ;
 		switch(copy_u8PORT)

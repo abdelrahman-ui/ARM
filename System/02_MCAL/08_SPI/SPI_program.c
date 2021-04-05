@@ -103,6 +103,11 @@
 	 #endif
 
  }
+ void SPI_voidInitHardCode(void)
+ {
+	 MSPI1_t->CR1 = 0x0347 ;
+	 
+ }
  
 		//	Only One Slave
  void MSPI1_voidSendReceiveSynch(u8 Copy_u8DataToTransmit  , u8 *Copy_DataToReceive)
@@ -117,4 +122,9 @@
 		*Copy_DataToReceive = MSPI1_t ->DR ;
 			/* Set Slave Select Pin */
 		MGPIO_voidSetPinValue(MSPI1_SALAVE_PIN , HIGH);
+ }
+ void MSPI1_voidInitForTFT(void)
+ {
+	 /* CPOL = 1 / CPHA =1 / Prescaller = Clk/2 / SPI_EN / MSB Frist  */
+	 MSPI1_t->CR1 = 0X0347	;
  }
