@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;DAC_Audio/src/_write.c&apos;" deleteContents="false" description="Delete resource &apos;DAC_Audio/src/_write.c&apos;" element1="/DAC_Audio/src/_write.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1628982369289"/>
+</session>

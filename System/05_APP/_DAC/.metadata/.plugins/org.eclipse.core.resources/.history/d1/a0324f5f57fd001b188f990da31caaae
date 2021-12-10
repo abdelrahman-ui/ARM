@@ -1,0 +1,50 @@
+
+#include "TYPES.h"
+#include "MACROS.h"
+
+#include "RCC_interface.h"
+#include "DIO_interface.h"
+#include "STK_interface.h"
+
+#include "audio.h"
+
+volatile u16 i;
+ void voidSetDAC(void);
+void main(void)
+{
+	RCC_voidInitSysClock();
+	RCC_voidEnableClock(RCC_APB2, 2);
+	MGPIO_VidSetPinValue(GPIOA,0,0b0010) ;
+	MGPIO_VidSetPinValue(GPIOA,1,0b0010) ;
+	MGPIO_VidSetPinValue(GPIOA,2,0b0010) ;
+	MGPIO_VidSetPinValue(GPIOA,3,0b0010) ;
+	MGPIO_VidSetPinValue(GPIOA,4,0b0010) ;
+	MGPIO_VidSetPinValue(GPIOA,5,0b0010) ;
+	MGPIO_VidSetPinValue(GPIOA,6,0b0010) ;
+	MGPIO_VidSetPinValue(GPIOA,7,0b0010) ;
+
+	MSTK_voidInit();
+	MSTK_voidSetIntervalPeriodic(125,voidSetDAC);
+	while()
+	{
+
+		voidSetDAC();
+
+	}
+
+
+
+}
+
+void voidSetDAC(void)
+{
+
+	GPIOA_ODR=ADC_raw[i];
+	i++;
+	if(i==36890)
+	{
+	i=0;
+	}
+	}
+}
+

@@ -1,0 +1,24 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 19, 2021
+ *      Author: Pro
+ */
+
+#include "TYPES.h"
+#include "MACROS.h"
+
+#include "DIO_interface.h"
+#include "RCC_interface.h"
+#include "NVIC_interface.h"
+
+void main(void)
+{
+
+
+
+
+}
+
+
+

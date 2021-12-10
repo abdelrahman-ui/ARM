@@ -1,0 +1,13 @@
+
+#include "TYPES.h"
+#include "MACROS.h"
+
+#include "RCC_interface"
+#include "DIO_interface"
+#include "STK_interface"
+
+void main(void)
+{
+	RCC
+
+}

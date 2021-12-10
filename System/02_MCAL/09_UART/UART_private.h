@@ -1,6 +1,5 @@
 /****************************************************************
  ************  - UART_private.h				   ******************
- ***********					   		       ******************
  ***********   -Created: 3/18/2021			   ******************
  ***********   -Author: Abdelrahman_Magdy      ******************
  ***********   -Version : _1_				   ******************
@@ -18,26 +17,31 @@
 						- What Is The Output
 ******************************************************************/
 
+
 #ifndef UART_PRIVATE_H
 #define UART_PRIVATE_H
 
-typedef struct 
-{
-	volatile 32 SR		;
-	volatile 32 DR		;
-	volatile 32 BRR		;
-	volatile 32 CR1		;
-	volatile 32 CR2		;
-	volatile 32 CR3		;
-	volatile 32 GRPR	;
-	}UART_1_t;
-	
-#define  BASS_ADDRESS_UART_1_		((volatile UART_1_t *)0x40013800)		 
+typedef struct{
 
-#define  ENABLE_RX		2
-#define  ENABLE_TX		3
-#define  ENABLE_UART	13
-#define  TC_FLAG		6
-#define  RXNE_FLAG		5
+	volatile u32 SR;
+	volatile u32 DR;
+	volatile u32 BRR;
+	volatile u32 CR1;
+	volatile u32 CR2;
+	volatile u32 CR3;
+	volatile u32 GTPR;
 
-#endif // UART_PRIVATE_H
+}USART_Type;
+
+
+#define MUSART1 ( ( volatile USART_Type* ) 0x40013800 )
+
+#define MUSART2 ( ( volatile USART_Type* ) 0x40004400 )
+
+#define MUSART3 ( ( volatile USART_Type* ) 0x40004800 )
+
+#define MUART4 (  ( volatile USART_Type* ) 0x40004C00 )
+
+#define MUART5 (  ( volatile USART_Type* ) 0x40005000 )
+
+#endif /* UART_PRIVATE_H*/

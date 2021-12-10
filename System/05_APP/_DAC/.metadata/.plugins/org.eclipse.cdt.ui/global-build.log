@@ -1,0 +1,24 @@
+01:32:07 **** Incremental Build of configuration Debug for project DAC_Audio ****
+make all 
+Building file: ../src/DIO_program.c
+Invoking: Cross ARM GNU C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=8000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f1-stdperiph" -std=gnu11 -MMD -MP -MF"src/DIO_program.d" -MT"src/DIO_program.o" -c -o "src/DIO_program.o" "../src/DIO_program.c"
+../src/DIO_program.c:9:10: warning: missing terminating " character
+ #include "MACROS.h
+          ^
+../src/DIO_program.c:9:10: error: #include expects "FILENAME" or <FILENAME>
+ #include "MACROS.h
+          ^~~~~~~~~
+../src/DIO_program.c: In function 'MGPIO_VidSetPinValue':
+../src/DIO_program.c:79:4: warning: implicit declaration of function 'SET_BIT' [-Wimplicit-function-declaration]
+    SET_BIT( GPIOA_ODR , Copy_u8Pin );
+    ^~~~~~~
+../src/DIO_program.c:82:4: warning: implicit declaration of function 'CLR_BIT'; did you mean '__CHAR_BIT__'? [-Wimplicit-function-declaration]
+    CLR_BIT(  GPIOA_ODR , Copy_u8Pin );
+    ^~~~~~~
+    __CHAR_BIT__
+../src/DIO_program.c: In function 'MGPIO_u8GetPinValue':
+../src/DIO_program.c:117:18: warning: implicit declaration of function 'GET_BIT' [-Wimplicit-function-declaration]
+   LOC_u8Result = GET_BIT( GPIOA_IDR , Copy_u8Pin );
+                  ^~~~~~~
+make: *** [src/subdir.mk:29: src/DIO_program.o] Error 1
