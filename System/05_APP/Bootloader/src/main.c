@@ -6,7 +6,7 @@
  *  Version : _1_
 
  */
-
+ 
 #include "STD_TYPES.h"
 #include "BIT_MATH.h"
 
@@ -41,10 +41,10 @@ void main(void)
 {
 	u8 Local_u8RecStatus;
 
-	RCC_voidInitSysClock();			  			/* Init CLK HSI  */
-	RCC_voidEnableClock(RCC_APB2,14); 			/*  EN USART1	 */
-	RCC_voidEnableClock(RCC_APB2,2);  			/*  EN PortA  	 */
-	RCC_voidEnableClock(RCC_AHB,4);   			/*  EN FPEC  	 */
+	RCC_voidInitSysClock();			  		/* Init CLK HSI  */
+	RCC_voidEnableClock(RCC_APB2,14); 			/*  EN CLK USART1	 */
+	RCC_voidEnableClock(RCC_APB2,2);  			/*  EN CLK PortA  	 */
+	RCC_voidEnableClock(RCC_AHB,4);   			/*  EN CLK FPEC  	 */
 
 	//	The Dir of uart 1
 	MGPIO_VidSetPinDirection(GPIOA,9,0b1010);   /* TX AFPP -->A9 */
